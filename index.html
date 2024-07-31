@@ -4,7 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucerna</title>
-    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="icon" type="image/x-icon" href="image/icon.png">
+    <link rel="stylesheet" href="botão1.css">
+    <link rel="stylesheet" href="botão2.css">
+    <link rel="stylesheet" href="botão3.css">
+    <link rel="stylesheet" href="botão4.css">
+
+    <style>
+        .image-container
+        {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img
+        {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container
+        {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+
 </head>
 <body style="background-color: antiquewhite;">
     <h1 style= "text-align: center; font-size:40px; color: black; font-family: Verdana; 
@@ -18,19 +44,26 @@
         Lucerna é um polo cultural vibrante, onde festivais de música clássica e eventos de arte<br>
         contemporânea enriquecem sua atmosfera acolhedora e tranquila.<br>
     </p>
-    <p 
-        style="text-align: center;" >
-        <img src="foto.avif" alt="Lucerna" width="350">
-    </p>
 
-    
-    <div class="aperte"> 
-        <button  id="button1" onclick="changecontent" >
-
-        </button>
+    <div class="image-container">
+        <img id="image" src="image/lagodelucerna.jpg" alt="Lago de Lucerna" width="600">
+        <div id="caption" class="image-caption">
+            Visão panorâmica do famoso ponto turístico, Lago de Lucerna.
     </div>
 
-
-    
+    <div class="container"> 
+        <button  id="button1" onclick="changecontent ('image/lagodelucerna.jpg', 'Visão panorâmica do famoso ponto turístico, Lago de Lucerna.')" class="botao">1</button>
+        <button id="button2" onclick="changecontent ('image/leao.webp', 'O Monumento do Leão é uma homenagem ais guardas suíços que foram massacrados durante a Revolução Francesa.')" class="botao">2</button>
+        <button id="button3" onclick="changecontent ('image/montepilatus.jpg', 'Com sua vista estonteante, o Monte Pilatus é um ponto de parada obrigatório para quem está visitando Lucerna.')" class="botao">3</button>
+        <button id="button4" onclick="changecontent ('image/pontedacapela.jpg', 'A Ponte da Capela, feita toda de madeira, foi contruída as margens do Rio Reuss.')" class="botao">4</button> 
+    </div>
+    <script>
+        function changecontent(imageSrc, captionText) 
+        {
+            document.getElementById('image').Src = imageSrc;
+            document.getElementById('caption').textContent = captionText; 
+        }
+    </script>
 
 </body>
+</html>
